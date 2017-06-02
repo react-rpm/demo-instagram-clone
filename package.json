@@ -10,13 +10,8 @@
     "start": "node devServer.js",
     "tunnel": "browser-sync start --proxy localhost:7770 --tunnel wesbos"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/wesbos/Learn-Redux.git"
-  },
-  "author": "Wes Bos",
+  "author": "Team JAMM",
   "license": "MIT",
-  "homepage": "https://github.com/wesbos/Learn-Redux",
   "dependencies": {
     "babel-core": "^6.7.7",
     "babel-eslint": "^6.0.4",
@@ -52,9 +47,13 @@
     "webpack-hot-middleware": "^2.10.0"
   },
   "devDependencies": {
+    "babel-core": "^6.24.1",
     "expect": "^1.18.0",
     "expect-jsx": "^2.5.1",
     "mocha": "^2.4.5",
-    "react-addons-test-utils": "^15.0.2"
+    "react-addons-perf": "^15.4.2",
+    "react-addons-test-utils": "^15.0.2",
+    "react-hot-loader": "^1.3.1",
+    "webpack-dev-server": "^2.4.5"
   }
 }

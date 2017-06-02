@@ -13,7 +13,8 @@ import Single from './components/Single';
 //import react router deps
 import {Router, Route, IndexRoute, browserHistory} from 'react-router';
 import { Provider } from 'react-redux';
-import store, { history } from './store'
+import store, { history } from './store';
+import Perf from 'react-addons-perf';
 
 const router = (
   <Provider store={store}>
@@ -26,4 +27,12 @@ const router = (
   </Provider>
 )
 
+Window.Perf = Perf;
+Perf.start();
 render(router, document.getElementById('root'));
+Perf.stop();
+
+const measurements = Perf.getLastMeasurements();
+
+Perf.printInclusive(measurements);
+Perf.printWasted(measurements);
